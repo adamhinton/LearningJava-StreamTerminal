@@ -32,5 +32,11 @@ public class Main {
                 .count();
 
         System.out.println("ReservationCount: " + reservationCount);
+
+        boolean hasBookings = Arrays
+                .stream(seats)
+                .anyMatch(Seat::isReserved);
+
+        System.out.println("Has bookings = " + hasBookings);
     }
 }

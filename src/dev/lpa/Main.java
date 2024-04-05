@@ -46,6 +46,12 @@ public class Main {
         System.out.println("fullyBooked = " + fullyBooked);
 
 
+        boolean eventWashedOUt = Arrays
+                .stream(seats)
+                .noneMatch(Seat::isReserved);
+
+        System.out.println("noneMatch = " + eventWashedOUt);
+
 
     }
 }
